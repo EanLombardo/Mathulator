@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" android:title="Preferences" android:key="main_prefs">
+   
+        
+    
+    
+    <ListPreference android:entryValues="@array/angle_type_val" android:title="Angle" android:entries="@array/angle_type_string" android:key="angle" android:defaultValue="0"></ListPreference>
+    <CheckBoxPreference android:summaryOff="Reverse polish notation will not be shown." android:summaryOn="Reverse polish notation will be shown." android:key="show_rpn" android:title="Show RPN" android:summary="Should reverse polish notation be shown"></CheckBoxPreference>
+    <CheckBoxPreference android:summaryOn="Backspacing over autcompleted text will remove all of it" android:title="Smart Backspacing" android:summaryOff="Backspacing works normally" android:key="smart_backspace" android:defaultValue="false"/><CheckBoxPreference android:defaultValue="false" android:key="show_time" android:title="Show Time" android:summaryOn="The application will show how long it takes for each Mathulation to complete" android:summaryOff="The application will not show how long it takes for each Mathulation to complete"></CheckBoxPreference><PreferenceCategory android:summary="Settings for sending data to google for the developer to see. This helps us make our app better" android:title="Google Analytics">
+        <CheckBoxPreference android:defaultValue="true" android:title="Use Google Analytics" android:key="use_analytics" android:summary="If you don't want us to see how often you use the app uncheck this. If you are ok with it please leave this checked, it helps us make our app better."></CheckBoxPreference>
+        <CheckBoxPreference android:defaultValue="true" android:title="Anonymize Ip" android:key="ip" android:dependency="use_analytics" android:summary="The developer can never see your ip address. But if this box is unchecked Google will remember it."></CheckBoxPreference>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Graphing">
+        <CheckBoxPreference android:key="graphing_colors_switched" android:defaultValue="false" android:title="Switch Colors" android:summaryOn="When graphing the background is white with black axis." android:summaryOff="When graphing the background is black with white axis."></CheckBoxPreference>
+        <CheckBoxPreference android:key="graphing_show_grid" android:defaultValue="false" android:title="Show Grid" android:summaryOn="A grid will be drawn on the graph to make specific points easier to see." android:summaryOff="A grid will not be drawn on the graph to make the function(s) easier to see."></CheckBoxPreference>
+        <CheckBoxPreference android:key="graphing_dot_mode" android:summaryOn="Graph will be drawn using points to represent the values for graphing. This is slightly faster but hard to see, especially with multiple graphs." android:defaultValue="false" android:title="Dot Mode" android:summaryOff="Graph will be drawn normally using lines to represent what it actually looks like."></CheckBoxPreference>
+        
+        
+    </PreferenceCategory><PreferenceCategory android:title="Apearance">
+        <CheckBoxPreference android:summaryOn="Display lines between calculator intries" android:summaryOff="Don't display lines between calculator intries" android:title="Separate Input" android:key="separate_input"/>
+    </PreferenceCategory>
+    
+    
+    
+</PreferenceScreen>

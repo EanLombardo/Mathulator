@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/relativeLayout1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:gravity="bottom" android:layout_gravity="bottom" xmlns:android="http://schemas.android.com/apk/res/android">
+    <ViewFlipper android:layout_width="fill_parent" android:id="@+id/viewFlipper1" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="bottom" android:id="@+id/linearLayout3" android:layout_height="fill_parent" android:layout_width="fill_parent" android:baselineAligned="true" android:orientation="vertical" android:paddingRight="15dip">
+            <ScrollView android:fadingEdge="none" android:fadeScrollbars="true" android:id="@+id/scrollView1"  android:scrollbarAlwaysDrawVerticalTrack="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingBottom="0dip" android:layout_weight="1" android:scrollbarAlwaysDrawHorizontalTrack="false" android:fillViewport="false">
+                <LinearLayout android:layout_height="fill_parent" android:id="@+id/linearLayout2" android:orientation="vertical" android:layout_width="fill_parent"></LinearLayout>
+            </ScrollView>
+            <LinearLayout android:gravity="bottom" android:id="@+id/linearLayout1" android:layout_width="fill_parent" android:layout_height="45dip" android:layout_weight="0">
+                <MultiAutoCompleteTextView android:text="EditText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/editText1" android:layout_weight="1"></MultiAutoCompleteTextView>
+                <Button android:id="@+id/button1" android:text="Evaluate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="0"></Button>
+            </LinearLayout>
+        </LinearLayout>
+        <RelativeLayout android:id="@+id/rellay_graph" android:layout_width="wrap_content" android:layout_height="wrap_content" android:gravity="bottom" android:layout_gravity="bottom" >
+                <android.widget.SlidingDrawer android:layout_gravity="bottom" android:orientation="vertical" android:layout_width="fill_parent" android:id="@+id/calc_slide" android:handle="@+id/calc_slideHandleButton" android:content="@+id/calc_contentLayout" android:layout_height="fill_parent" android:bottomOffset="0dip" android:topOffset="50dip">
+<com.ic.mathulator.BottomSwipeViewHandle android:id="@+id/calc_slideHandleButton" android:layout_width="fill_parent" android:layout_height="15dip" android:gravity="bottom" android:background="#00FF00"></com.ic.mathulator.BottomSwipeViewHandle>
+<LinearLayout android:layout_width="wrap_content" android:id="@+id/calc_contentLayout" android:orientation="vertical" android:gravity="center|top"  android:paddingRight="15dip" android:background="#000000" android:layout_height="wrap_content">
+</LinearLayout>
+</android.widget.SlidingDrawer>
+<ZoomControls android:id="@+id/graphZoomer" android:layout_width="wrap_content" android:layout_height="wrap_content"></ZoomControls>
+        </RelativeLayout>
+    </ViewFlipper>
+
+<LinearLayout android:orientation="vertical" android:id="@+id/linearLayout3" android:gravity="right" android:layout_gravity="right" android:layout_height="fill_parent" android:layout_width="fill_parent">
+    <android.widget.SlidingDrawer android:layout_gravity="right" android:orientation="horizontal" android:layout_width="100dip" android:id="@+id/SlidingDrawer" android:handle="@+id/slideHandleButton" android:content="@+id/contentLayout" android:layout_height="fill_parent" android:bottomOffset="0dip">
+<com.ic.mathulator.LeftSwipeViewHandle android:id="@+id/slideHandleButton" android:layout_width="15dip" android:layout_height="fill_parent" android:gravity="bottom" android:background="#FF0000"></com.ic.mathulator.LeftSwipeViewHandle>
+<LinearLayout android:layout_width="wrap_content" android:id="@+id/contentLayout" android:orientation="vertical" android:gravity="center|top" android:padding="10dip" android:background="#C0C0C0" android:layout_height="wrap_content">
+<Button android:id="@+id/Calc_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Calculator"></Button>
+<Button android:id="@+id/Graph_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Graph"></Button>
+<Button android:id="@+id/Data_Button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Data"></Button>
+</LinearLayout>
+</android.widget.SlidingDrawer>
+</LinearLayout>
+
+</RelativeLayout>

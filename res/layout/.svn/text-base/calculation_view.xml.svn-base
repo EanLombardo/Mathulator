@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/calcs"
+    android:orientation="vertical" >
+    <TextView
+        android:id="@+id/in"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Input"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    <TextView
+        android:id="@+id/output"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:text="Output"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:text="Time"
+        android:textColor="#ff00ff00"
+        android:visibility="gone"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/rpn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:text="RPN"
+        android:textColor="#ffffff00"
+        android:visibility="gone"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <View
+        android:id="@+id/bar1"
+        android:layout_width="wrap_content"
+        android:layout_height="1px"
+        android:background="#ffffffff"/>
+
+</LinearLayout>

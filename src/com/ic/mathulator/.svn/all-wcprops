@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/22/trunk/%20mathulator-alpha/trunk/src/com/ic/mathulator
+END
+Preferences.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/18/trunk/%20mathulator-alpha/trunk/src/com/ic/mathulator/Preferences.java
+END
+MathulatorSettings.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/25/trunk/%20mathulator-alpha/trunk/src/com/ic/mathulator/MathulatorSettings.java
+END
+FunctionCategoryItem.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/25/trunk/%20mathulator-alpha/trunk/src/com/ic/mathulator/FunctionCategoryItem.java
+END
+GraphExpressionEntry.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/25/trunk/%20mathulator-alpha/trunk/src/com/ic/mathulator/GraphExpressionEntry.java
+END
+WindowOptionsDialog.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/25/trunk/%20mathulator-alpha/trunk/src/com/ic/mathulator/WindowOptionsDialog.java
+END
+LeftSwipeViewHandle.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/25/trunk/%20mathulator-alpha/trunk/src/com/ic/mathulator/LeftSwipeViewHandle.java
+END
+BottomSwipeViewHandle.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/25/trunk/%20mathulator-alpha/trunk/src/com/ic/mathulator/BottomSwipeViewHandle.java
+END
+main.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/25/trunk/%20mathulator-alpha/trunk/src/com/ic/mathulator/main.java
+END
+GraphFunctionSelectDialog.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/!svn/ver/25/trunk/%20mathulator-alpha/trunk/src/com/ic/mathulator/GraphFunctionSelectDialog.java
+END
+CalculationView.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/25/trunk/%20mathulator-alpha/trunk/src/com/ic/mathulator/CalculationView.java
+END
+PointSelector.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/25/trunk/%20mathulator-alpha/trunk/src/com/ic/mathulator/PointSelector.java
+END
+InputTokenizer.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/25/trunk/%20mathulator-alpha/trunk/src/com/ic/mathulator/InputTokenizer.java
+END
+GraphView.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/25/trunk/%20mathulator-alpha/trunk/src/com/ic/mathulator/GraphView.java
+END
+FunctionCategoryListActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/!svn/ver/25/trunk/%20mathulator-alpha/trunk/src/com/ic/mathulator/FunctionCategoryListActivity.java
+END
+NewInThisVersionDialog.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/18/trunk/%20mathulator-alpha/trunk/src/com/ic/mathulator/NewInThisVersionDialog.java
+END
+FunctionListActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/25/trunk/%20mathulator-alpha/trunk/src/com/ic/mathulator/FunctionListActivity.java
+END

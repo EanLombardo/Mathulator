@@ -1,0 +1,167 @@
+package com.ic.mathulator;
+
+import java.text.DecimalFormat;
+
+import com.ic.libICMath.ICCalculatorBase;
+import com.ic.libICMath.ICFunction;
+
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.DashPathEffect;
+import android.graphics.Paint;
+import android.graphics.Paint.Style;
+import android.os.Handler;
+import android.os.Message;
+import android.view.MotionEvent;
+import android.view.View;
+class GraphView extends View
+{
+	public int centerX=0;
+	public int centerY=0;
+	
+	public int offsetX=0;
+	public int offsetY=0;
+	
+	public int translateX=0;
+	public int translateY=0;
+	
+	public int downX=0;
+	public int downY=0;
+	
+	public double scale=1;
+	public int scaleBasis=1;
+	
+	public ICCalculatorBase calculator;
+	
+	public int drawMode=DrawModes.DRAWMODE_NORMAL;
+	public static interface DrawModes
+	{
+		int DRAWMODE_NORMAL=0;
+		int DRAWMODE_TRANSLATE=1;
+	}
+	
+	public static interface Paints
+	{
+		public static Paint BLUE=new Paint();
+		public static Paint BLACK=new Paint();
+		public static Paint WHITE=new Paint();
+	}
+	
+	Bitmap bufferBitmap;
+	Canvas bufferCanvas;
+	
+	Double lastValue;
+
+	public GraphView(Context context, ICCalculatorBase calc)
+	{
+		super(context);
+		calculator = calc;
+		
+		Paints.BLUE.setColor(Color.BLUE);
+		Paints.BLACK.setColor(Color.BLACK);
+		Paints.WHITE.setColor(Color.WHITE);
+	}
+
+	@Override
+	public void onDraw(Canvas canvas)
+	{
+		if(centerX==0)
+		{
+			centerX=this.getWidth()/2;
+			centerY=this.getHeight()/2;
+		}
+		canvas.drawLine(centerX+offsetX+translateX, 0, centerX+offsetX+translateX, centerY*2, Paints.WHITE);
+		canvas.drawLine(0, centerY+offsetY+translateY, centerX*2, centerY+offsetY+translateY, Paints.WHITE);
+		if(drawMode==DrawModes.DRAWMODE_NORMAL)
+		{
+			bufferBitmap=bufferBitmap.createBitmap(canvas.getWidth(), canvas.getHeight(), Bitmap.Config.ARGB_8888);
+			bufferCanvas = new Canvas(bufferBitmap);
+			
+			
+			if(calculator.graphingFunctions.size()==1)
+			{
+			for(int pixelIndex=0;pixelIndex<canvas.getWidth();pixelIndex++)
+			{
+				int currentPos=pixelIndex-centerX-offsetX;
+				int value=(int)calculator.graphingFunctions.get(0).eval((double)currentPos);
+				
+				bufferCanvas.drawPoint(pixelIndex, (centerY+offsetY)-value, Paints.BLUE);
+			}
+			}
+			canvas.drawBitmap(bufferBitmap, 0, 0, Paints.BLACK);
+		}
+		else
+		{
+			canvas.translate(translateX, translateY);
+			canvas.drawBitmap(bufferBitmap, 0, 0, Paints.WHITE);
+			canvas.translate(-translateX, -translateY);
+			
+			int from=0;
+			int to=0;
+			if(translateX>0)
+			{
+				from=0;
+				to=translateX;
+			}
+			else if(translateX<0)
+			{
+				from=canvas.getWidth()+translateX;
+				to=canvas.getWidth();
+			}
+			
+			if(calculator.graphingFunctions.size()==1)
+			{
+			for(int pixelIndex=from;pixelIndex<to;pixelIndex++)
+			{
+				int currentPos=pixelIndex-centerX-offsetX-translateX;
+				int value=(int)calculator.graphingFunctions.get(0).eval((double)currentPos);
+				
+				canvas.drawPoint(pixelIndex, (centerY+offsetY+translateY)-value, Paints.BLUE);
+			}
+			}
+			
+		}
+		canvas.drawText("offsetX= "+String.valueOf(offsetX), 0, 100, Paints.BLUE);
+		canvas.drawText("offsetY= "+String.valueOf(offsetY), 0, 120, Paints.BLUE);
+		
+		canvas.drawText("translateX= "+String.valueOf(translateX), 0, 140, Paints.BLUE);
+		canvas.drawText("translateY= "+String.valueOf(translateY), 0, 160, Paints.BLUE);
+		
+		canvas.drawText("centerX= "+String.valueOf(centerX), 0, 180, Paints.BLUE);
+		canvas.drawText("centerY= "+String.valueOf(centerY), 0, 200, Paints.BLUE);
+	}
+
+	@Override
+	public boolean onTouchEvent(MotionEvent me)
+	{
+			int action = me.getAction();
+			if (me.getPointerCount() == 1 && action == MotionEvent.ACTION_UP)
+			{
+				drawMode=DrawModes.DRAWMODE_NORMAL;
+				offsetX+=translateX;
+				offsetY+=translateY;
+				translateX=0;
+				translateY=0;
+			}
+			else if((me.getPointerCount() == 1 && action == MotionEvent.ACTION_DOWN))
+			{
+				drawMode=DrawModes.DRAWMODE_TRANSLATE;
+				
+				downX=(int)me.getX();
+				downY=(int)me.getY();
+			}
+			
+			if(drawMode==DrawModes.DRAWMODE_TRANSLATE && action == MotionEvent.ACTION_MOVE)
+			{
+				translateX=(int)me.getX()-downX;
+				translateY=(int)me.getY()-downY;
+				
+			}
+			invalidate();
+			
+			
+		return true;
+	}
+}

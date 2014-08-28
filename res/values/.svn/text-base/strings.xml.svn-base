@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Mathulator</string>
+    <string name="hi">Enter an Expression to Evaluate:</string>
+    <string name="evaluated"> </string>
+    <string name="eval_button_text">Evaluate</string>
+    <string name="description">&quot;This is an ALPHA version, it is incomplete and should be used at your own risk, this application comes with no guarantee of any sort. &lt;b&gt;&lt;b&gt; This is an app desinged to do everything a modern day graphing calculator can do, it is no where near completion but I wanted it out on the market so people can tell me if they find any bugs. At the moment the graph view will crash if you do not declare f(x) when it's switched to. At the moment most standard functions are included and it uses syntax similar to the Texas Insturment Nspire Calculator. So to declare a function use := not =. Such as f(x):=cos(x). Documentation on all included functions and syntax will be written later so good luck trying to find out how to use it. Please do not rate down the app because of a wrong answer or a crash it is still incomplete. DO NOT RELY ON THIS APP as it is incomplete and may give wrong answers. I am not responsible for any incorrect answers given by this app. &lt;b&gt;&lt;b&gt; I am in no way afiliated with Texas Insturments and copyright for Texas Instruments and Nspire belong to their respective owners. I am not one of those owners.&quot;</string>
+    <string name="changelog">Version 1.3.4\nIntegrals and derivatives can be done in the graph using the analyze menu.\nEntries in the calculator are now handled nicer, separators are optional, but to see info and copy output/input long press the entry.\nTablet improvements\nThe menus all have nice graphics now.\nThe app will now ask you to install a math keyboard. You can use the suggested or any other one on the market, or even the stock android keyboard.\nYou now see only calculator menu options when using the calculator, and graph options when using the graph... the way it should be.</string>
+    <string name="version">1.3.4</string>
+</resources>

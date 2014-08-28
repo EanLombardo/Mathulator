@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent" android:orientation="vertical">
+    <LinearLayout android:id="@+id/linearLayout1" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:layout_height="fill_parent" android:layout_width="wrap_content" android:id="@+id/linearLayout2" android:orientation="vertical">
+            <TextView android:text="Name:" android:id="@+id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+
+            <EditText
+                android:id="@+id/FunctionName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="text"
+                android:text="" >
+</EditText>
+        </LinearLayout>
+        <LinearLayout android:layout_height="fill_parent" android:layout_width="wrap_content" android:id="@+id/linearLayout5" android:orientation="vertical">
+            <TextView android:text=" " android:id="@+id/textView4" android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+
+            <TextView
+                android:id="@+id/equals"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="=" >
+
+</TextView>
+        </LinearLayout>
+        <LinearLayout android:layout_height="wrap_content" android:id="@+id/linearLayout3" android:orientation="vertical" android:layout_weight="9" android:layout_width="fill_parent">
+            <TextView android:layout_height="wrap_content" android:text=" Function:" android:id="@+id/textView2" android:layout_width="wrap_content"></TextView>
+            <EditText android:layout_height="wrap_content" android:inputType="text" android:text="" android:layout_weight="9" android:id="@+id/Expression" android:layout_width="fill_parent"></EditText>
+        </LinearLayout>
+        <LinearLayout android:layout_height="fill_parent" android:layout_width="wrap_content" android:id="@+id/linearLayout4" android:orientation="vertical">
+            <TextView android:layout_height="wrap_content" android:text="   " android:id="@+id/textView3" android:layout_width="wrap_content"></TextView>
+
+            <ImageButton
+                android:id="@+id/addBut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/add" />
+
+        </LinearLayout>
+    </LinearLayout>
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:id="@+id/scroll">
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:orientation="vertical" android:id="@+id/functionholder"></LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Mathulator</string>
+    <string name="hi">Enter an Expression to Evaluate:</string>
+    <string name="evaluated"> </string>
+    <string name="eval_button_text">Evaluate</string>
+    <string name="description">&quot;This is an ALPHA version, it is incomplete and should be used at your own risk, this application comes with no guarantee of any sort. &lt;b&gt;&lt;b&gt; This is an app desinged to do everything a modern day graphing calculator can do, it is no where near completion but I wanted it out on the market so people can tell me if they find any bugs. At the moment the graph view will crash if you do not declare f(x) when it's switched to. At the moment most standard functions are included and it uses syntax similar to the Texas Insturment Nspire Calculator. So to declare a function use := not =. Such as f(x):=cos(x). Documentation on all included functions and syntax will be written later so good luck trying to find out how to use it. Please do not rate down the app because of a wrong answer or a crash it is still incomplete. DO NOT RELY ON THIS APP as it is incomplete and may give wrong answers. I am not responsible for any incorrect answers given by this app. &lt;b&gt;&lt;b&gt; I am in no way afiliated with Texas Insturments and copyright for Texas Instruments and Nspire belong to their respective owners. I am not one of those owners.&quot;</string>
+    <string name="changelog">Version 1.3.5\nPersistance\nThe app will now load all of you input, functions, and variables from your last run.\nSo now everytime you open the app it will look exactly like when you cloes it.\nGraph zooming improvements\nThe graph zooms and changes grids in a way that makes alot more sense now\n\nThe next version will be nearly an entire new subsystem, expect major speed improvements and no glitches.</string>
+    <string name="version">1.3.5</string>
+</resources>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.ic.mathulator"
+      android:versionName="@string/version" android:versionCode="11">
+    <uses-sdk android:minSdkVersion="7" android:targetSdkVersion="11"/>
+        <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    
+    <application android:label="Mathulator Alpha"  android:allowClearUserData="true" android:allowBackup="true" android:icon="@drawable/mathulator" android:persistent="true" android:description="@string/description">
+        
+        <activity android:name=".main"
+        android:configChanges="orientation|keyboardHidden"
+        android:windowSoftInputMode="adjustResize"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+<activity
+        android:name=".Preferences"
+        android:label="preferences">
+</activity>
+<activity android:name=".FunctionCategoryListActivity" android:label="Function Categories"></activity>
+<activity android:name=".FunctionListActivity"></activity>
+    </application>
+
+</manifest>
